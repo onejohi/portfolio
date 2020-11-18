@@ -1,43 +1,426 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Onejohi is a Nairobi based freelance fullstack/blockchain developer. His specialties include Blockchain using Ethereum or Stellar, Android and iOS apps using NativeScript, and full stack applications using the MEAN stack. His hobbies include IoT devices and Machine Learning (AI)." />
+    <meta name="author" content="Onejohi Tony" />
+    <meta name="keywords" content="Onejohi, Onejohi Tony, Tony Onejohi, Titan, First Titan, Titan Owner, Titan Creator, #thisistitan">
+    <title>Onejohi Tony</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <script defer src="https://kit.fontawesome.com/e457a8db58.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.0.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
+    <!---
     <script defer src="/__/firebase/8.0.2/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.0.2/firebase-database.js"></script>
     <script defer src="/__/firebase/8.0.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.0.2/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.0.2/firebase-storage.js"></script> -->
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Onejohi</span>
+        <span class="d-none d-lg-block">
+          <!--
+          <div class="btn-group btn-group-justified">
+            <button class="btn btn-sm btn-success" (click)="home_menu.toggle()">Chat</button>
+            <button class="btn btn-sm btn-success">Email</button>
+          </div>-->
+          <div style='height: 30px'></div>
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/img/profile-pic.JPG" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container-fluid p-0">
+    
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" style="background: url('./assets/img/profile.JPG') !important; background-size: cover !important; background-attachment: fixed !important;">
+        <div class="my-auto">
+          <h1 class="mb-0 text-white">Onejohi
+            <span class="text-primary">Tony</span>
+          </h1>
+          <div class="subheading text-white text-shadow">
+            Nairobi. KE · +254(0)727321766 ·<a target="_blank" href="https://twitter.com/onejohi">@onejohi</a>
+          </div>
+          <div class="subheading mb-5 text-white text-shadow">
+            #thisistitan
+          </div>
+          <p class="mb-5 text-white text-shadow">"Two things power the internet, to find and to be found" - Onejohi.</p>
+          <div class="btn-group">
+            <a type="button" href="http://heichliquid.surge.sh/" target="_blank" class="btn-primary btn-lg btn">
+              Heich Liquid Energy
+            </a>
+            <a type="button" href="https://titan-dev-fec5f.web.app/" target="_blank" class="btn btn-dark btn-lg px-5">
+              #thisistitan
+            </a>
+          </div>
+          <br>
+          <br>
+          <br>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/channel/UCalGAv8-0kxg1afed23IMag" title="YouTube (#thisistitan)" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://codepen.io/Onejohi/" title="Codepen" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-codepen fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://medium.com/@onejohi" title="Medium" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-medium fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/onejohi" title="GitHub" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+  
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">FullStack/Blockchain Developer</h3>
+              <div class="subheading mb-3">Raise Impact - Spring Valley</div>
+              <p>
+                Currently working as an independent contractor working on the amazing
+                <a href="https://getraise.io">Raise</a> platfrom as a full stack developer, working on 
+                the UI elements and backend systems that support them. The project is an 
+                  African platform built to issue, track and transfer compliant
+                 digital securities using the blockchain.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">February 2019 - Present</span>
+            </div>
+          </div>
+    
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">FullStack Developer</h3>
+              <div class="subheading mb-3">Izone Solutions - Westlands</div>
+              <p>
+                My task is to build sustainable solutions for companies using C#, ASP.NET and Microsoft SQL Server 2016.
+                The projects developed are also to be made side by side using Angular5, AngularJS or React framework.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">February 2018 - Feb 2019</span>
+            </div>
+          </div>
+    
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Developer Intern</h3>
+              <div class="subheading mb-3">United States International University (USIU)</div>
+              <p>
+                Build WebApps and Native apps for clients that require custom systems. The systems developed were to
+                ensure smooth running of operations, minimize operational cost and ensure cost effective measures area
+                put in place under the system's supervision.
+              </p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">November 2017 - February 2018</span>
+            </div>
+          </div>
+    
+        </div>
+    
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education" style="background: url('./assets/img/betterupper.jpg') !important; background-attachment: fixed !important; background-size: cover !important;">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+    
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Mount Kenya University</h3>
+              <div class="subheading mb-3 text-white">Bachelor of Computer Science</div>
+              <div class="text-white">Computer Science - Full Stack development & IoT</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-white">September 2015 - Present</span>
+            </div>
+          </div>
+    
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Mutitu High School</h3>
+              <div class="subheading mb-3 text-white">Basic Computer Knowledge</div>
+              <p class="text-white">C+</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-white">January 2012 - November 2013</span>
+            </div>
+          </div>
+    
+        </div>
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+    
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/angularjs-original.svg?size=64&color=currentColor" alt="Angular5" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/ionic-original.svg?size=64&color=currentColor" alt="Ionic" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/html5-original-wordmark.svg?size=64&color=currentColor" alt="HTML5" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/css3-original-wordmark.svg?size=64&color=currentColor" alt="CSS3" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/javascript-original.svg?size=64&color=currentColor" alt="JavaScript" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/google-plain.svg?size=64&color=currentColor" alt="GCP" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/jquery-original-wordmark.svg?size=64&color=currentColor" alt="jQuery" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/python-original.svg?size=64&color=currentColor" alt="Python" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/nodejs-original.svg?size=64&color=currentColor" alt="NodeJS" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/mysql-original-wordmark.svg?size=64&color=currentColor" alt="MySQL" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/bootstrap-plain-wordmark.svg?size=64&color=currentColor" alt="Bootstrap" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/mongodb-original-wordmark.svg?size=64&color=currentColor" alt="MongoDB" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/visualstudio-plain.svg?size=64&color=currentColor" alt="VS Code" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/npm-original-wordmark.svg?size=64&color=currentColor" alt="NPM" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/git-original.svg?size=64&color=currentColor" alt="Git" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/amazonwebservices-original.svg?size=64&color=currentColor" alt="AWS" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/atom-original.svg?size=64&color=currentColor" alt="Atom" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/bitbucket-original-wordmark.svg?size=64&color=currentColor" alt="BitBucket" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/csharp-original.svg?size=64&color=currentColor" alt="C#" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/docker-original.svg?size=64&color=currentColor" alt="Docker" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/dot-net-original-wordmark.svg?size=64&color=currentColor" alt=".NET" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/express-original-wordmark.svg?size=64&color=a6a6a6" alt="Express" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/github-original-wordmark.svg?size=64&color=currentColor" alt="GitHub" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/heroku-original-wordmark.svg?size=64&color=currentColor" alt="Heroku" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/typescript-original.svg?size=64&color=currentColor" alt="TypeScript" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/vuejs-original.svg?size=64&color=currentColor" alt="VueJS" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/webpack-original.svg?size=64&color=currentColor" alt="Webpack" />
+            </li>
+            <li class="list-inline-item">
+              <img class="px-5 py-3" src="https://icongr.am/devicon/windows8-original.svg?size=64&color=currentColor" alt="Windows Store Apps" />
+            </li>
+          </ul>
+    
+          <div class="subheading mb-3 mt-5 text-center">Workflow</div>
+          <ul class="fa-ul mb-0 mx-auto w-50">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Analytics and Search Engine Optimization techniques</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+          </ul>
+        </div>
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests" style="background: url('./assets/img/robotics.jpg') !important; background-attachment: fixed !important; background-size: cover !important; background-repeat: no-repeat !important;">
+        <div class="my-auto">
+          <h2 class="mb-5">Projects</h2>
+          <div class="container-fluid flex">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Graphine East Africa</h5>
+                <p class="card-subtitle mb-2 text-success">Completed.</p>
+                <p class="card-text">An online service where clients schedule appointments to have their equipment collected for maintenance or have technicians on the ground for repair works.</p>
+                <a target="__blank" href="http://graphineeastafrica.com/" class="text-info btn btn-link">Visit Site</a>
+                <a href="#" class="text-success btn btn-link">View Screenshots</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Deliveryman Africa</h5>
+                <p class="card-subtitle mb-2 text-warning">Under Development</p>
+                <p class="card-text">Send deliveries across the city of Nairobi quickly and conveniently, create an account and start your journey.</p>
+                <a target="__blank" href="https://deliveryman.africa" class="text-info btn btn-link">Visit Site</a>
+                <a href="#" class="text-success btn btn-link">View Screenshots</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Organization</th>
+                <th>
+                  
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>JavaScript Certificate</td>
+                <td>Solo Learn</td>
+                <td>
+                  <a class="btn btn-sm btn-success" href="https://www.sololearn.com/Certificate/1024-6360136/pdf/">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>jQuery Certificate</td>
+                <td>Solo Learn</td>
+                <td>
+                  <a class="btn btn-sm btn-success" href="https://www.sololearn.com/Certificate/1082-6360136/pdf/">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>SQL Certificate</td>
+                <td>Solo Learn</td>
+                <td>
+                  <a class="btn btn-sm btn-success" href="https://www.sololearn.com/Certificate/1060-6360136/pdf/">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>MEAN Stack Proficiency</td>
+                <td>MVA - Microsoft Virtual Academy</td>
+                <td>
+                  <a class="btn btn-sm btn-success" href="https://mva.microsoft.com/RewardEvidence.aspx/?key=vfIPVeKkHyYTNI73bREJpQ2">View</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Articles</h2>
+          <ul class="list-group">
+            <a target="_blank" href="https://medium.com/@onejohi/git-understanding-the-basics-ba004a20dacc" class="list-group-item">Git: Understanding the basics.</a>
+            <a target="_blank" href="https://medium.com/@onejohi/building-a-simple-rest-api-with-nodejs-and-express-da6273ed7ca9" class="list-group-item">Building a simple REST API with NodeJS and Express.</a>
+            <a target="_blank" href="https://medium.com/@onejohi/getting-started-with-typescript-614ceef0921c" class="list-group-item">Getting started with TypeScript.</a>
+            <a target="_blank" href="https://medium.com/@onejohi/an-introduction-to-dom-f22f9d92faca" class="list-group-item">An introduction to DOM</a>
+            <a target="_blank" href="https://medium.com/@onejohi/will-iot-emerge-to-become-the-new-wave-of-computing-e10423800f0f" class="list-group-item">Will IoT emerge to become the new wave of computing?</a>
+            <a target="_blank" href="https://medium.com/@onejohi/5-disruptive-technologies-using-iot-in-the-farm-e145c7de6dd" class="list-group-item">5 Disruptive Technologies using IoT in the Farm</a>
+            <a target="_blank" href="https://medium.com/@onejohi/getting-started-with-angular-5-5099104eb2f" class="list-group-item">Getting started with Angular 5 </a>
+            <a target="_blank" href="https://medium.com/@onejohi/introducing-geolocation-in-your-pwas-65713faba51a" class="list-group-item">Introducing Geolocation in your PWAs</a>
+            <a target="_blank" href="https://medium.com/@onejohi/getting-started-as-a-developer-399a8920caa0" class="list-group-item">Getting Started as a Developer.</a>
+            <a target="_blank" href="https://medium.com/@onejohi/the-beginning-of-my-javascript-journey-5a88209a2c3b" class="list-group-item">The beginning of my JavaScript Journey</a>
+          </ul>
+        </div>
+      </section>
+    
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
