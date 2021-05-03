@@ -23,7 +23,7 @@ const addClass = ({ elementId, className }) => {
 
 const matchRandomNumberWithClass = () => {
   const backgrounds = ['bg-primary', 'bg-secondary', 'bg-success', 'bg-dark', 'bg-danger', 'bg-warning'];
-  const index = generateRandomRange(0, (backgrounds.length + 1));
+  const index = generateRandomRange(0, (backgrounds.length - 1));
   const bgSetTo = classExists({ elementId: 'sideNav', backgroundClasses: [ ...backgrounds ]});
   if (bgSetTo) {
     removeClass({ elementId: 'sideNav', className: bgSetTo });
