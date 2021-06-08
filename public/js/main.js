@@ -2,23 +2,19 @@ const generateRandomRange = (min, max) => {
   return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min));
 }
 
-// check if a list of classes exist in a particular div, returns classname if it exists
 const classExists = ({ elementId, backgroundClasses }) => {
-  const element = document.getElementById(elementId);
-  const { classList } = element;
+  const { classList } = document.getElementById(elementId);
   const navActiveClasses = [];
   classList.forEach(navClass => navActiveClasses.push(navClass));
   return navActiveClasses.find(activeClass => backgroundClasses.includes(activeClass));
 }
 
 const removeClass = ({ elementId, className }) => {
-  const element = document.getElementById(elementId);
-  element.classList.remove(className);
+  document.getElementById(elementId).classList.remove(className);
 }
 
 const addClass = ({ elementId, className }) => {
-  const element = document.getElementById(elementId);
-  element.classList.add(className);
+  document.getElementById(elementId).classList.add(className);
 };
 
 const matchRandomNumberWithClass = () => {
